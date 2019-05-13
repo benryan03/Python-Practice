@@ -2,23 +2,23 @@
 #7. Write a Python program to accept a filename from the user and print the extension of that.
 #
 #This will work for any extension length (at least 1 character)
-#Still need to add error for input with no extension found
 
-
-result = False
-x = -1
+z = -1
 y = 1
+extension = ""
 
 filename = input("Enter a filename: ")
 filename = filename[::-1] #reverses filename
-while result == False:
-	x = filename.find(".", 0, y)
-	if x == -1:
+
+for x in filename:
+	z = filename.find(".", 0, y)
+	if z == -1: #if character is not a period
 		y = y + 1
-		continue
-	elif x == y:
-		result = True
-	break
-extension = filename[0:y]
-extension = extension[::-1] #reverses extension
-print("Extension: " + (extension))
+	else: #if character is a period
+		extension = filename[0:y]
+		extension = extension[::-1] #reverses extension
+		print("Extension: " + (extension))
+		break
+
+if extension == "":
+	print("Extension not found in filename.")
