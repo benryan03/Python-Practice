@@ -1,5 +1,5 @@
 #https://www.w3resource.com/python-exercises/python-basic-exercises.php
-#20. Write a Python program to get a string which is n (non-negative integer) copies of a given string.
+#21. Write a Python program to find whether a given number (accept from the user) is even or odd, print out an appropriate message to the user.
 
 x = int(input("Enter a number: "))
 
